@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BairroAção — Vila Aurora</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="phone">
+  <header class="topbar">
+    <button class="btn hood" id="hoodBtn">📍 Vila Aurora</button>
+    <div class="seg" id="modeSeg">
+      <button class="on" data-mode="prin">Principal</button>
+      <button data-mode="viz">Vizinhos</button>
+    </div>
+  </header>
+
+  <section id="view" class="content"></section>
+
+  <nav class="tabbar" id="tabs">
+    <button class="tab on" data-tab="feed">▤<span>Feed</span></button>
+    <button class="tab" data-tab="map">◎<span>Mapa</span></button>
+    <button class="fab" id="fab">＋</button>
+    <button class="tab" data-tab="dec">✓<span>Decisões</span></button>
+    <button class="tab" data-tab="hood">👥<span>Bairro</span></button>
+  </nav>
+</main>
+
+<!-- modal criar -->
+<div class="modal" id="createM">
+  <div class="modalC">
+    <div class="row between"><b class="t0">Nova publicação</b><button class="btn" id="closeCreate">✕</button></div>
+    <div class="typeG" id="typeG">
+      <button class="typeC on" data-ty="issue"><span>🛠</span><b>Problema urbano</b><small>Foto + pino no mapa</small></button>
+      <button class="typeC" data-ty="proposal"><span>💡</span><b>Proposta</b><small>Votação com quórum</small></button>
+      <button class="typeC" data-ty="alert"><span>⚠️</span><b>Alerta</b><small>Urgente 24–72h</small></button>
+      <button class="typeC" data-ty="service"><span>🤝</span><b>Indicação</b><small>Comércio local</small></button>
+    </div>
+    <div id="formFields" class="form"></div>
+    <button class="btn primary" id="publishBtn">Publicar no Vila Aurora</button>
+  </div>
+</div>
+
+<div class="sheet" id="sheet"></div>
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
